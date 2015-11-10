@@ -1,3 +1,4 @@
 class User < ActiveRecord::Base
-  has_many :comments, :pins
+  has_many :comments
+  has_many :pins
 end

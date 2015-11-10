@@ -14,19 +14,17 @@
 ActiveRecord::Schema.define(version: 2) do
 
   create_table "comments", force: :cascade do |t|
-    t.string   "username"
-    t.date     "postdate"
     t.string   "content"
+    t.integer  "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
   end
 
   create_table "pins", force: :cascade do |t|
-    t.string   "username"
     t.string   "title"
     t.string   "summary"
-    t.date     "postdate"
+    t.integer  "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "comments_id"

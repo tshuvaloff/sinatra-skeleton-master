@@ -12,17 +12,15 @@ class CreateTables < ActiveRecord::Migration
     end
 
     create_table :pins do |t|
-      t.string :username
       t.string :title
       t.string :summary 
-      t.date :postdate
+      t.integer :rating
       t.timestamps
     end
 
     create_table :comments do |t|
-    t.string :username
-    t.date :postdate
     t.string :content 
+    t.integer :rating
     t.timestamps
     end
 
