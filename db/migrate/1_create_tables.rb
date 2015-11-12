@@ -8,6 +8,7 @@ class CreateTables < ActiveRecord::Migration
       t.string :firstname
       t.string :lastname
       t.string :gender
+      t.date :birthday
       t.timestamps
     end
 

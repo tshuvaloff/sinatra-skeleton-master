@@ -43,17 +43,6 @@ label.col-sm-2.control-label {
   border: solid 2px #2E94D4;
 }
 
-label.col-sm-2.control-label.gender {
-  margin-left: 1.25%;
-  margin-top: 1.5%;
-}
-
-select#genderselect.form-control {
-  margin-left: 31.25%;
-  width: 25%;
-  margin-top: -3%;
-}
-
 button.btn.btn-default {
   margin-left: 15%;
   margin-top: 10%;

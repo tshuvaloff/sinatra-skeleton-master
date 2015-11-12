@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2) do
     t.string   "firstname"
     t.string   "lastname"
     t.string   "gender"
+    t.date     "birthday"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
