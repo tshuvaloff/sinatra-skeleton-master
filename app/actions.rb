@@ -25,6 +25,10 @@ get '/profile' do
 end
 
 post '/login' do
+  redirect '/'
+end
+
+post '/signup' do
   username = params[:username]
   password = params[:password]
 
@@ -35,10 +39,6 @@ post '/login' do
   else
     redirect '/login'
   end
-end
-
-post '/signup' do
-  redirect '/'
 end
 
 post '/profile' do
