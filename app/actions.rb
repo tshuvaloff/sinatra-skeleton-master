@@ -40,6 +40,16 @@ get '/pins/:id' do
   erb :pins
 end
 
+get '/profile/edit' do
+  current_user
+  erb :profile
+end
+
+
+
+
+
+
 # END GETS
 # BEGIN POSTS
 
@@ -118,6 +128,18 @@ post '/pins/:id/comments/new' do
   pin = Pin.find(params[:id])
   pin.comment.create(summary: summary)
   redirect "/pins/#{pin.id}"
+end
+
+post '/profile/edit' do
+  firstname = params[:firstname]
+  lastname = params[:lastname]
+  email = params[:email]
+  password = params[:password]
+  birthday = params[:birthday]
+
+  current_user.update firstname: firstname, lastname: lastname, email: email, password: password, birthday: birthday
+  redirect '/'
+
 end
   
 
