@@ -20,8 +20,7 @@ class CreateTables < ActiveRecord::Migration
     end
 
     create_table :comments do |t|
-    t.string :content 
-    t.integer :rating
+    t.string :summary 
     t.timestamps
     end
 

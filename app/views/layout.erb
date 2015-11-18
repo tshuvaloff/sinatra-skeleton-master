@@ -20,6 +20,13 @@
   <title></title>
 </head>
 <body>
+  <%= if current_user %>
+    <p> Hello, <%= current_user.firstname %></p>
+    <a href="/logout">Log out</a>
+  <% else %>
+    <a href="/signin">Signin</a>
+    <br>
+  <% end %>
   <%= yield %>
 </body>
 </html>

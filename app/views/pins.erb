@@ -1,0 +1,24 @@
+<div class="pin">
+  <h4><%= @pin.title %></h4>
+  <p><strong>Summary: </strong><%= @pin.summary %></p>
+</div>
+
+<h3> Comments </h3>
+<% if @pin.comments> 0 %>
+  <ul>
+    <% @pin.comments.each do |comment| %>
+      <li<%= comment.title %>
+    <% end %>
+
+<% else %>
+  <p><%= @pin.title %> No comments yet!</p>
+<% end %>
+
+<h3><%= @pin.title %>Add a Comment!</h3>
+  <form method="POST" action="/pins/<%= @pins.id %>/comments/new">
+    <label for="summary">Comment here: </label>
+    <input type="text" name="summary" id="summary">
+    <br>
+    <input type="submit" value="Create a new Comment">
+  </form>
+</form>
