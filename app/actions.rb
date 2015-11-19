@@ -120,7 +120,7 @@ post '/pins/:id/'
   pins = Pin.find(params[:id])
   pin.comments.create user_id:
   current_user.id, body: params[:body]
-  erb /pins/:id
+  redirect "/pins/#{pin.id}"
 end
 
 post '/pins/:id/comments/new' do
